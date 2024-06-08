@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#PBS -N rnn-a1
+#PBS -q batch
+#PBS -j oe
+#PBS -l nodes=1:ppn=32
+#PBS -o /public/home/huanghp7_qiujb3/Document/rnnComplexity/Figures/e3/a1.out
+
+NP='wc -l <$PBS_NODEFILE'
+cd $PBS_O_WORKDIR
+
+source /public/home/huanghp7_qiujb3/.bashrc
+cd "/public/home/huanghp7_qiujb3/Document/rnnComplexity"
+python ./Figures/e3/main.py
